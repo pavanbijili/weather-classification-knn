@@ -1,144 +1,125 @@
-🌦️ Weather Classification using K-Nearest Neighbors (KNN)
+# 🌦️ Weather Classification using K-Nearest Neighbors (KNN)
 
-This repository contains a Weather Classification system built using the K-Nearest Neighbors (KNN) machine learning algorithm.
-The project focuses not only on achieving good accuracy but also on understanding how a distance-based algorithm works internally.
+This repository contains a **Weather Classification system** built using the  
+**K-Nearest Neighbors (KNN)** machine learning algorithm.
 
-🚀 Project Overview
+The project focuses not only on achieving good accuracy but also on understanding  
+how a **distance-based algorithm** works internally.
 
-Weather classification plays an important role in areas such as agriculture, aviation, and daily planning.
-In this project, a KNN classifier is used to predict weather categories based on numerical and categorical weather features.
+---
 
-Key objectives of this project include:
+## 🚀 Project Overview
 
-Understanding the working principle of KNN
+Weather classification plays an important role in areas such as:
+- Agriculture 🌾
+- Aviation ✈️
+- Daily planning 📅
 
-Studying the effect of feature scaling
+In this project, a **KNN classifier** is used to predict weather categories based on  
+numerical and categorical weather features.
 
-Analyzing the impact of different k values
+### 🎯 Key Objectives
 
-Evaluating model performance using multiple metrics
+- Understanding the working principle of KNN  
+- Studying the effect of feature scaling  
+- Analyzing the impact of different **k** values  
+- Evaluating model performance using multiple metrics  
 
-🧠 Algorithm Used
-🔹 K-Nearest Neighbors (KNN)
+---
 
-Type: Supervised Learning (Classification)
+## 🧠 Algorithm Used
 
-Concept:
-A data point is classified based on the majority class of its k nearest neighbors, determined using distance metrics (Euclidean distance by default).
+### 🔹 K-Nearest Neighbors (KNN)
 
-Important characteristics of KNN:
+- **Type:** Supervised Learning (Classification)
 
-No explicit training phase (lazy learning)
+**Concept:**  
+A data point is classified based on the majority class of its **k nearest neighbors**,  
+determined using distance metrics (**Euclidean distance** by default).
 
-Distance-based decision making
+### Important Characteristics of KNN
 
-Highly sensitive to feature scaling
+- No explicit training phase (lazy learning)  
+- Distance-based decision making  
+- Highly sensitive to feature scaling  
+- Performance depends on the choice of **k**
 
-Performance depends on the choice of k
+---
 
-📂 Project Workflow
+## 📂 Project Workflow
 
-Import Libraries
+### 1️⃣ Import Libraries
+- Pandas  
+- NumPy  
+- Matplotlib / Seaborn  
+- Scikit-learn  
 
-Pandas
+### 2️⃣ Load Dataset
+- Read the weather dataset  
+- Inspect features and target variable  
 
-NumPy
+### 3️⃣ Data Preprocessing
+- Encode target labels  
+- One-Hot Encoding for categorical features  
+- Feature scaling using **StandardScaler**
 
-Matplotlib / Seaborn
+### 4️⃣ Train–Test Split
+- Split data into training and testing sets  
 
-Scikit-learn
+### 5️⃣ Model Building
+- Implement KNN classifier  
+- Experiment with different values of **k**
 
-Load Dataset
+### 6️⃣ Model Evaluation
+- Accuracy Score  
+- Confusion Matrix  
+- Classification Report (Precision, Recall, F1-Score)
 
-Read the weather dataset
+---
 
-Inspect features and target variable
-
-Data Preprocessing
-
-Encode target labels
-
-One-Hot Encoding for categorical features
-
-Feature scaling using StandardScaler
-
-Train–Test Split
-
-Split data into training and testing sets
-
-Model Building
-
-Implement KNN classifier
-
-Experiment with different values of k
-
-Model Evaluation
-
-Accuracy Score
-
-Confusion Matrix
-
-Classification Report (Precision, Recall, F1-Score)
-
-📊 Model Evaluation Metrics
+## 📊 Model Evaluation Metrics
 
 The model performance is evaluated using:
 
-Accuracy
+- Accuracy  
+- Precision  
+- Recall  
+- F1-Score  
+- Confusion Matrix  
 
-Precision
+These metrics provide both **overall performance** and **class-wise insights**.
 
-Recall
+---
 
-F1-Score
+## ⚙️ Why Feature Scaling is Important in KNN
 
-Confusion Matrix
+KNN relies on **distance calculations**.  
+If features are on different scales, variables with larger magnitudes dominate the  
+distance computation.
 
-These metrics provide both overall performance and class-wise insights.
+### ✔ Feature scaling ensures:
+- Fair distance measurement  
+- Improved model performance  
+- Stable and meaningful neighbor selection  
 
-⚙️ Why Feature Scaling is Important in KNN
+For this reason, **StandardScaler** is applied before training the KNN model.
 
-KNN relies on distance calculations.
-If features are on different scales, variables with larger magnitudes dominate the distance computation.
+---
 
-✔ Feature scaling ensures:
+## 🧪 Experimentation & Observations
 
-Fair distance measurement
+- Tested multiple values of **k**  
+- Observed the **bias–variance tradeoff**  
+- Compared model performance before and after scaling  
+- Found that proper preprocessing significantly improves accuracy  
 
-Improved model performance
+---
 
-Stable and meaningful neighbor selection
+## 📁 Repository Structure
 
-For this reason, StandardScaler is applied before training the KNN model.
-
-🧪 Experimentation & Observations
-
-Tested multiple values of k
-
-Observed the bias–variance tradeoff
-
-Compared model performance before and after scaling
-
-Found that proper preprocessing significantly improves accuracy
-
-📁 Repository Structure
+```text
 ├── Weather_task_knn.ipynb
 ├── weather_classification_data.csv
 ├── README.md
 ├── requirements.txt
 
-🎯 Key Learnings
-
-KNN does not learn parameters; it stores training data
-
-Choosing the right value of k is critical
-
-Feature scaling is mandatory for distance-based models
-
-Simple algorithms can perform very well with correct preprocessing
-
-👨‍💻 Author
-
-Bijili Pavan
-🎓 B.Tech – Computer Science (AI & ML)
-📊 Machine Learning & Data Science Enthusiast
