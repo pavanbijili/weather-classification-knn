@@ -123,3 +123,11 @@ For this reason, **StandardScaler** is applied before training the KNN model.
 ├── README.md
 ├── requirements.txt
 
+
+---
+
+👨‍💻 Author
+
+Bijili Pavan
+🎓 B.Tech – Computer Science (AI & ML)
+📊 Machine Learning & Data Science Enthusiast
